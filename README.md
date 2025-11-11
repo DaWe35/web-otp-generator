@@ -2,6 +2,8 @@
 
 A simple, real-time OTP (2FA) code generator that runs in your browser.
 
+<img width="1572" height="1013" alt="image" src="https://github.com/user-attachments/assets/df09e736-31db-40b4-a0bb-b3b8e1a443e7" />
+
 ## Running the Project
 
 1.  Make sure you have Docker and Docker Compose installed.
