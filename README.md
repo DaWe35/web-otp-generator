@@ -11,3 +11,9 @@ A simple, real-time OTP (2FA) code generator that runs in your browser.
     docker-compose up -d
     ```
 4.  Open your browser and navigate to `http://localhost:8080`.
+
+You can also specify a custom port by setting the `PORT` environment variable:
+```bash
+PORT=8080 docker-compose up -d
+```
+Then, you can access the application at `http://localhost:8080`.
