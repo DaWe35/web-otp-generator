@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>OTP Generator</h1>
+        <p>Enter your 2FA secret key to generate an OTP code.</p>
+        <div class="input-container">
+            <input type="text" id="secret" placeholder="Enter your secret key">
+            <button id="saveSecret">Save</button>
+        </div>
+        <div class="otp-container">
+            <p>Your OTP code is:</p>
+            <h2 id="otp">------</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <p>Time remaining: <span id="timer">30</span>s</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/otpauth@9.2.2/dist/otpauth.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
