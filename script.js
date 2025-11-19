@@ -9,7 +9,12 @@ let intervalId = null;
 function updateOtp() {
     if (!totp) return;
     
-    otpDisplay.textContent = totp.generate();
+    const newOtp = totp.generate();
+    // Only update text content if the OTP value has changed
+    // This prevents clearing text selection when the value is the same
+    if (otpDisplay.textContent !== newOtp) {
+        otpDisplay.textContent = newOtp;
+    }
     const timeRemaining = 30 - (Math.floor(Date.now() / 1000) % 30);
     timerDisplay.textContent = timeRemaining;
     progressBar.style.width = `${(timeRemaining / 30) * 100}%`;
